@@ -5,7 +5,7 @@ This is a simple project that shows how to to integrate mysql2 with express and 
 
 First clone the repo:
 ```bash
-clone https://github.com/NicholasLennox/mysql2-express-class.git
+git clone https://github.com/NicholasLennox/mysql2-express-class.git
 ```
 
 Navigate into the project and install the required dependencies:
