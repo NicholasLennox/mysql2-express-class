@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <a href="/">Back to list</a>
+    <h1>Edit channel</h1>
+    <form action="/edit/<%= channel.id %>" method="post">
+        <div>
+            <label for="name">Channel name:</label>
+            <input type="text" name="name" id="name" value="<%= channel.channel_name %>">
+        </div>
+        <div>
+            <label for="email">Channel email:</label>
+            <input type="email" name="email" id="email" value="<%= channel.channel_email %>">
+        </div>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>

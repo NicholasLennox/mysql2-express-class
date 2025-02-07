@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channels</title>
+</head>
+<body>
+    <a href="/add">Add channel</a>
+    <% if (channels.length > 0) { %>
+     <h1>Channels</h1>
+     <ul>
+        <% channels.forEach(channel => { %>
+            <li>
+                <%= channel.channel_name %> | 
+                <%= channel.channel_email %> |
+                <%= channel.is_deleted %> | 
+                <button onclick="location.href='/edit/<%= channel.id%>'">Edit</button> | 
+                <form action="/delete/<%= channel.id %>" method="post" style="display: inline;">
+                    <button type="submit" onclick="return confirm('Are you sure?')">Delete</button>
+                </form>
+            </li>
+        <% }) %>
+     </ul>
+     <% } else { %>
+      <h1>There are no channels</h1>
+    <% } %>
+</body>
+</html>
